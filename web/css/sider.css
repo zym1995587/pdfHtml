@@ -1,0 +1,52 @@
+#styleCssView,#sureSignView{
+  margin: 10px;
+color:#fff;
+}
+.styleCssViewCont{
+  background-color: #61595982;
+  margin-bottom: 10px;
+}
+.styleCssViewPage{
+  text-align: left;
+  margin:0;
+  padding:8px 10px;
+  cursor: pointer;
+}
+
+.styleCssViewBoxs{
+  background-color: #615959ff;
+  margin:0;
+}
+.styleCssViewBox{
+  position: relative;
+  padding:10px 0;
+  padding-left: 50px;
+  height:36px;
+  margin:0;
+  border-bottom: 1px solid #4c4242cf;
+}
+
+.styleCssViewBox p{
+  cursor: pointer;
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.styleCssViewBox .xiahua{
+  position: absolute;
+  left: 10px;
+  height:28px;
+  line-height: 28px;
+  font-size: 28px;
+  margin-top:6px;
+  cursor: pointer;
+}
+.styleCssViewBox .styleCssViewDeleteBtn{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}

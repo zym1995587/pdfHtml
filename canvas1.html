@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>canvas画图</title>
+		<script type="application/javascript">
+		function draw(){
+			var canvas = document.getElementById("mycanvas");
+			if (canvas.getContext) {
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle="aquamarine";
+				ctx.fillRect(0,0,30,30);
+				ctx.fillStyle="beige";
+				ctx.fillRect(20,13,30,24);
+			}
+		}
+	</script>
+	</head>
+	<body onload="draw();">
+		<canvas id="mycanvas" width="500" height="500">如果你不能兼容就看的见，所以请更新浏览器版本或者，使用高版本浏览器。</canvas>
+	</body>
+	
+</html>

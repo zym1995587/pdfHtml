@@ -1,0 +1,115 @@
+.cursorMarked{
+  cursor: url('../images/message-y.png'), auto !important;
+}
+.pop_edit_div{
+  position: absolute;
+  width: 250px;
+  /* height: 150px; */
+  border: 1px solid #3498DB;
+  border-radius: 6px;
+  background: #f9f9f9;
+  padding: 10px 10px 5px 10px;
+  z-index: 9999;
+}
+.pop_edit_div .pop_title_div{
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 2px 0px 6px;
+}
+.pop_edit_div .inputText{
+  padding: 0px 2px 10px 6px;
+  word-wrap: break-word; 
+  word-break: normal; 
+}
+
+.pop_edit_div .close_png{
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.pop_edit_div .replay_btn{
+  color: #666;
+  cursor: pointer;
+}
+.pop_edit_div textarea{
+  outline: none;
+  border: none;
+  resize: none;
+  width: 240px;
+  height: 80px;
+  margin-left: 5px;
+  background: #f9f9f9;
+}
+.pop_edit_div .publish_word{
+  text-align: right;
+}
+.pop_edit_div .publish_word a{
+  background: #e6e6df;
+  color: #666;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+  outline: none;
+  border: none;
+  font-size: 12px;
+}
+.sureSign1{
+  background: #3498DB !important;
+  color: #fff !important;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 12px;
+}
+#ceshi{
+  position: absolute;
+  z-index: 9999;
+  background:#fff;
+  
+}
+.addcolor{
+  font-size: 11.9552px;
+  color: red;
+  background: #000;
+}
+
+/* 处理选中的文字 三个按钮 */
+.pop_word_div{
+  position: absolute;
+  z-index: 9999;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 1);
+  border-radius: 3px;
+  left: 0;
+  top: 0;
+}
+.pop_word_div span{
+  margin:4px 8px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+}
+.pop_word_div span.textlighthigh{
+  background: url(../images/highlight_gray.png) no-repeat;
+}
+.pop_word_div span.textunderline{
+  background: url(../images/underline_gray.png) no-repeat;
+}
+.pop_word_div span.textthroughline{
+  background: url(../images/underline_gray.png) no-repeat;
+}
+.pop_word_div span.textlighthigh:hover{
+  background: url(../images/highlight_white.png) no-repeat;
+}
+.pop_word_div span.textunderline:hover{
+  background: url(../images/underline_white.png) no-repeat;
+}
+.pop_word_div span.textthroughline:hover{
+  background: url(../images/underline_white.png) no-repeat;
+}

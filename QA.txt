@@ -1,0 +1,49 @@
+
+*修改标注，得先获取当前位置的之前的所有标注内容，并显示出来。应该只能修改最近的一条标注。
+
+*回复标注。指不同人操作同一文档时候。获取之前的所有标注。回复最近的标注内容。
+
+点击除本身以外的区域
+e.stopPropagation();//阻止事件冒泡
+e.preventDefault();//阻止默认事件
+
+所选取的点，{left,top} left值是距离page左侧空白的距离，top值是到当页顶部的距离
+pdfjs在zoomIn zoomOut的时候整个文档会重新渲染，所有操作点需要重新计算*******************************************
+点击标注后，所有点击事件应该只作用在标注上
+点击铅笔后，之前标注的事件需要屏蔽
+
+
+功能类型：
+1.添加标注（有用户名，时间，有列表，能回复）
+2.高亮文本
+3.给文本加下划线
+4.给文本加删划线
+5,左侧或右侧添加悬浮框展示所有的批注和修改下划线
+提交数据类型：
+1，type = "act_marked"
+left，top是距离当前页左侧,顶部的距离
+提交和返回的数据格式
+markedData=[{
+  "pageNum":1,
+  "data":[
+    {"left":330,"top":359,"message":"教育"},
+    {"left":430,"top":459,"message":"教育"},
+    {"left":90,"top":659,"message":"教育"}
+  ]
+ },
+ {
+  "pageNum":2,
+  "data":[
+    {"left":330,"top":1559,"message":"教育"},
+    {"left":430,"top":1459,"message":"教育"},
+    {"left":90,"top":1659,"message":"教育"}
+  ]
+ }
+]
+//[{"left":330,"top":1659,"message":"教育","pageNum":"页码"},{"left":400,"top":1695,"message":"出版","pageNum":"页码"}]
+2,type = "act_highlight"
+高亮文本，页码，开始坐标{left,top},结束坐标{left,top}
+3,type = "act_underline"
+下划线文本，页码，开始坐标{left,top},结束坐标{left,top}
+4,type = "act_linethrough"
+中划线文本，页码，开始坐标{left,top},结束坐标{left,top}

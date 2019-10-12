@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>pdf</title>
+	</head>
+	<style>
+		.layer {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, .4);
+			display: none;
+			z-index: -1;
+		}
+		a{color: #000;text-decoration: none;}
+		a:hover,a:visited,a:link{color: #000;}
+		.closepdf {
+			position: absolute;
+			right: 30px;
+			display: inline-block;
+			width: 80px;
+			height: 30px;
+			top: 12px;
+		}
+		.popPdfContainer{
+			width: 100%;
+			height: auto;
+		}
+		.pdfContainer{
+			width: 80%;
+			margin-left: 10%;
+			border-radius: 10px;
+		}
+	</style>
+	<body>
+		<div class="layer" id="layer"></div>
+		<a href="web/viewer.html?file=b.pdf" target="pdfContainer" onclick="showPdf(true)">点击预览PDF文件</a>
+		<div class="popPdfContainer" id="popPdfContainer" style="display: none;">
+			<a href="javascript:close()" class="closepdf" id="close">关闭</a>
+			<iframe src="" frameborder="0" name="pdfContainer" class="pdfContainer" id="iframeCon"></iframe>
+		</div>
+	</body>
+  <script src="web/js/jquery.min.js"></script>
+	<script src="build/pdf.js"></script>
+	<script>
+		function showPdf(isShow){
+			var state="";
+			if(isShow){
+				state = "block";
+			}
+			else{
+				state = "none";
+			}
+			var ele = document.getElementById("popPdfContainer");
+			ele.style.display = state;
+			var mask = document.getElementById("layer");
+			mask.style.display = state;
+			var h = window.innerHeight;
+			var iframe = document.getElementById("iframeCon");
+			iframe.style.height = h -50 +'px';
+		}
+
+		function close() {
+			showPdf(false);
+		}
+	</script>
+</html>
