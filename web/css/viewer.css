@@ -1330,6 +1330,11 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   content: url(../images/message.png);
 }
 
+.toolbarButton.textMarking::before,
+.secondaryToolbarButton.textMarking::before {
+  content: url(../images/textMarking.png);
+}
+
 .toolbarButton.download::before,
 .secondaryToolbarButton.download::before {
   content: url(../images/toolbarButton-download.png);
@@ -2177,6 +2182,10 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   .secondaryToolbarButton.markedFile::before {
     content: url(../images/message.png);
   }
+  .toolbarButton.textMarking::before,
+  .secondaryToolbarButton.textMarking::before {
+    content: url(../images/textMarking.png);
+  }
 
   .toolbarButton.download::before,
   .secondaryToolbarButton.download::before {
@@ -2202,7 +2211,10 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   .secondaryToolbarButton.markedFile::before {
     content: url(../images/message@2x.png);
   }
-
+  .toolbarButton.textMarking::before,
+  .secondaryToolbarButton.textMarking::before {
+    content: url(../images/textMarking@2x.png);
+  }
 
   html[dir="ltr"] #viewOutline.toolbarButton::before {
     content: url(../images/toolbarButton-viewOutline@2x.png);
